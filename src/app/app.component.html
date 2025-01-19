@@ -1,1 +1,78 @@
-<h1>test 16</h1>
+<h1>Multi card demo</h1>
+
+<div class="main-container">
+  <div class="container-ctm">
+
+
+    <!-- Card 1 with its own buttons -->
+    <div class="btn-custom">
+      <button (click)="showSpinner('card1')">Show Spinner 1</button>
+      <button (click)="hideSpinner('card1')">Hide Spinner 1</button>
+    </div>
+    <div class="ctm-card">
+      <p>Content 1</p>
+      <d-spinner card="card1" loader="rotating-pie-shape" width="100" thickness="4" primaryColor="yellow"
+        secondaryColor="cyan" transparencyColor="#91919136">
+      </d-spinner>
+    </div>
+  </div>
+
+  <div class="container-ctm">
+    <!-- Card 2 with its own buttons -->
+    <div class="btn-custom">
+      <button (click)="showSpinner('card2')">Show Spinner 2</button>
+      <button (click)="hideSpinner('card2')">Hide Spinner 2</button>
+    </div>
+    <div class="ctm-card">
+      <p>Content 2</p>
+      <d-spinner card="card2" loader="glowing-ring" width="100" thickness="4" primaryColor="white"
+        transparencyColor="#91919136">
+      </d-spinner>
+    </div>
+  </div>
+
+  <div class="container-ctm">
+    <!-- Card 3 with its own buttons -->
+    <div class="btn-custom">
+      <button (click)="showSpinner('card3')">Show Spinner 3</button>
+      <button (click)="hideSpinner('card3')">Hide Spinner 3</button>
+    </div>
+    <div class="ctm-card">
+      <p>Content 3</p>
+      <d-spinner card="card3" loader="balancing-shapes" width="100" thickness="4" primaryColor="purple"
+        secondaryColor="orange" transparencyColor="#91919136">
+      </d-spinner>
+    </div>
+  </div>
+
+  <div class="container-ctm">
+    <!-- Card 4 with its own buttons -->
+    <div class="btn-custom">
+      <button (click)="showSpinner('card4')">Show Spinner 4</button>
+      <button (click)="hideSpinner('card4')">Hide Spinner 4</button>
+    </div>
+    <div class="ctm-card">
+      <p>Content 4</p>
+      <d-spinner card="card4" loader="rising-bars-with-dot" width="100" thickness="4" primaryColor="white"
+        secondaryColor="red" transparencyColor="#91919136">
+      </d-spinner>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div style="border-top: 3px solid #d2d2d2">
+
+  <h1>All Spinner demo</h1>
+
+  <div style="display: flex;flex-wrap: wrap;">
+    <div *ngFor="let item of spinnerTypes; let i = index"
+      style="width: 250px; height: 250px; border: 3px solid rgb(241, 147, 15); position: relative;">
+      {{i}} - {{item}}
+
+      <d-spinner card="allSpinner" [loader]="item" width="100" thickness="4"></d-spinner>
+
+    </div>
+  </div>
+</div>
