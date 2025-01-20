@@ -1,0 +1,91 @@
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* To center the cards horizontally */
+}
+
+.ctm-card {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin-bottom: 16px; /* Adds space below each card */
+}
+
+.btn-custom {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+    margin-bottom: 6px;
+}
+
+.container-ctm {
+    margin: auto 24px;
+}
+
+/* Default button styles */
+.button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.showButton {
+    background: linear-gradient(90deg, rgb(228, 233, 77) 0%, rgb(87, 212, 66) 100%);
+    color: white;
+}
+
+.hideButton {
+    background: linear-gradient(90deg, rgba(83, 223, 238, 1) 0%, rgba(170, 66, 212, 1) 100%);
+    color: white;
+}
+
+p {
+    padding-left: 16px;
+}
+
+/* Mobile Responsive Styles */
+// @media (max-width: 768px) {
+//     /* Stack the cards vertically on smaller screens */
+//     .main-container {
+//         flex-direction: column;
+//         align-items: center; /* Center cards in column direction */
+//     }
+
+//     .ctm-card {
+//         width: 90%; /* Make cards take up most of the screen width */
+//         height: auto; /* Allow height to be flexible depending on content */
+//         margin-bottom: 20px;
+//     }
+
+//     /* Adjust buttons for smaller screens */
+//     .btn-custom {
+//         flex-direction: column;
+//         gap: 8px; /* Add space between buttons */
+//     }
+
+//     .button {
+//         padding: 10px 20px; /* Increase button size for touch screens */
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     /* For very small screens (e.g., phones) */
+//     .ctm-card {
+//         width: 100%; /* Make cards take up the full width on small screens */
+//         height: auto;
+//     }
+
+//     .button {
+//         padding: 12px 24px; /* Increase button size for smaller touch screens */
+//         font-size: 14px; /* Adjust font size */
+//     }
+
+//     /* Reduce space between cards and buttons */
+//     .btn-custom {
+//         margin-top: 10px;
+//         margin-bottom: 10px;
+//     }
+// }

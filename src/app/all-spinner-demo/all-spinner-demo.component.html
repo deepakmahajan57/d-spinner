@@ -1,0 +1,13 @@
+<div>
+
+    <div style="display: flex;flex-wrap: wrap;">
+      <div *ngFor="let item of spinnerTypes; let i = index"
+        style="width: 250px; height: 250px; border: 3px solid rgb(241, 147, 15); position: relative;">
+       
+       <p style="margin-left: 12px;"> {{i + 1}} - {{item}}</p>
+  
+        <d-spinner card="allSpinner" [loader]="item" width="100" thickness="4"></d-spinner>
+  
+      </div>
+    </div>
+  </div>
