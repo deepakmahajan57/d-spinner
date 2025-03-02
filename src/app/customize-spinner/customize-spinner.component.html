@@ -1,0 +1,103 @@
+<div class="main-container-1">
+
+  <div class="form-dv">
+    <form [formGroup]="form" class="cstm-spin-f-1">
+      <div class="form-field">
+        <label for="loader">Width</label>
+        <select name="loader" id="loader" formControlName="loader">
+          <option *ngFor="let item of spinnerTypes" [value]=item>{{item}}</option>
+        </select>
+        <div *ngIf="form.get('loader')?.invalid && form.get('loader')?.touched">
+          Width is required and must be an integer.
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="width">Width</label>
+        <input id="width" formControlName="width" type="number" />
+        <div *ngIf="form.get('width')?.invalid && form.get('width')?.touched">
+          Width is required and must be an integer.
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="thickness">Thickness</label>
+        <input id="thickness" formControlName="thickness" type="number" />
+        <div *ngIf="form.get('thickness')?.invalid && form.get('thickness')?.touched">
+          Thickness is required and must be an integer.
+        </div>
+      </div>
+      <div class="ctm-space">
+        <label for="primaryColor">Primary Color:</label>
+        <ngx-colors ngx-colors-trigger class="cstm-spin-color-1" formControlName="primaryColor"></ngx-colors>
+      </div>
+      <div class="ctm-space">
+        <label for="secondaryColor">Secondary Color:</label>
+        <ngx-colors id="secondaryColor" ngx-colors-trigger class="cstm-spin-color-1"
+          formControlName="secondaryColor"></ngx-colors>
+      </div>
+      <div class="ctm-space">
+        <label for="transparencyColor">Transparency Color:</label>
+        <ngx-colors ngx-colors-trigger class="cstm-spin-color-1" formControlName="transparencyColor"></ngx-colors>
+      </div>
+      <button type="button" (click)="resetForm()" class="cstm-spin-reset-1">Reset</button>
+    </form>
+  </div>
+  <div class="spinner-dv">
+    <div class="cstm-spin-d-2">
+      My card content
+    </div>
+    <d-spinner *ngIf="form.get('width')?.value && form.get('thickness')?.value" card="custom-spinner-c-1"
+      [loader]="form.get('loader')?.value" [width]="form.get('width')?.value" [thickness]="form.get('thickness')?.value"
+      [primaryColor]="form.get('primaryColor')?.value" [secondaryColor]="form.get('secondaryColor')?.value"
+      [transparencyColor]="form.get('transparencyColor')?.value">
+    </d-spinner>
+    <d-spinner *ngIf="form.get('width')?.value && !form.get('thickness')?.value" card="custom-spinner-c-1"
+      [loader]="form.get('loader')?.value" [width]="form.get('width')?.value"
+      [primaryColor]="form.get('primaryColor')?.value" [secondaryColor]="form.get('secondaryColor')?.value"
+      [transparencyColor]="form.get('transparencyColor')?.value">
+    </d-spinner>
+    <d-spinner *ngIf="!form.get('width')?.value && form.get('thickness')?.value" card="custom-spinner-c-1"
+      [loader]="form.get('loader')?.value" [thickness]="form.get('thickness')?.value"
+      [primaryColor]="form.get('primaryColor')?.value" [secondaryColor]="form.get('secondaryColor')?.value"
+      [transparencyColor]="form.get('transparencyColor')?.value">
+    </d-spinner>
+    <d-spinner *ngIf="!form.get('width')?.value && !form.get('thickness')?.value" card="custom-spinner-c-1"
+      [loader]="form.get('loader')?.value" [primaryColor]="form.get('primaryColor')?.value"
+      [secondaryColor]="form.get('secondaryColor')?.value" [transparencyColor]="form.get('transparencyColor')?.value">
+    </d-spinner>
+  </div>
+</div>
+<div class="cstm-spin-code-1">
+  <div class="cstm-spin-code-2">
+    <span class="ctm-white">&lt;<span class="ctm-pink">d-spinner</span>
+      <span class="ctm-green"> card</span>="<span class="ctm-brown">custom-spinner-c-1</span>"
+      <span class="ctm-green"> loader</span>="<span class="ctm-brown">{{form.get('loader')?.value}}</span>"
+      <span *ngIf="form.get('width')?.value"><span class="ctm-green"> width</span>="<span
+          class="ctm-brown">{{form.get('width')?.value}}</span>"</span>
+      <span *ngIf="form.get('thickness')?.value"><span class="ctm-green"> thickness</span>="<span
+          class="ctm-brown">{{form.get('thickness')?.value}}</span>"</span>
+      <span class="ctm-green"> primaryColor</span>="<span class="ctm-brown">{{form.get('primaryColor')?.value}}</span>"
+      <span class="ctm-green"> secondaryColor</span>="<span
+        class="ctm-brown">{{form.get('secondaryColor')?.value}}</span>"
+      <span class="ctm-green"> transparencyColor</span>="<span
+        class="ctm-brown">{{form.get('transparencyColor')?.value}}</span>"&gt;&lt;/<span
+        class="ctm-pink">d-spinner</span>&gt;</span>
+    <button (click)="copyToClipboard()" class="cstm-spin-copy-clip-1">
+      <span *ngIf="!copied" class="cstm-spin-copy-clip-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+        </svg>
+        <span class="cstm-spin-copy-clip-3">Copy</span>
+      </span>
+      <span *ngIf="copied" class="cstm-spin-copy-clip-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+        </svg>
+        <span class="cstm-spin-copy-clip-3">Copied</span>
+      </span>
+    </button>
+  </div>
+</div>

@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     display: flex;
+    overflow: auto;
 }
 
 .tab-nav li {
@@ -23,13 +24,11 @@
     background-color: #ddd;
 }
 
-/* Border color based on active tab */
 .tab-nav li.active {
-    border-bottom: 3px solid; /* Add bottom border */
+    border-bottom: 3px solid;
     font-weight: bold;
 }
 
-/* Specific border colors for each tab */
 .tab1.active {
     border-color: cyan !important;
     background: #00ffff36 !important;
@@ -40,18 +39,40 @@
     background: #ffc0cb57 !important;
 }
 
-/* Tab content styling */
+.tab3.active {
+    border-color: orange !important;
+    background: rgb(255, 232, 188) !important;
+}
+
+.tab4.active {
+    border-color: #9B1BBF !important;
+    background: #EEB4FF !important;
+}
+
 .tab-content {
     padding: 20px;
     border: 1px solid #ccc;
     transition: border-color 0.3s ease;
+    padding-top: 0px;
 }
 
-/* Apply the border colors for each active tab directly */
 .tab-content.cyan-border {
     border-color: cyan;
 }
 
 .tab-content.pink-border {
     border-color: pink;
+}
+
+.tab-content.orange-border {
+    border-color: orange;
+}
+
+.tab-content.green-border {
+    border-color: #9B1BBF;
+}
+
+.tab-border {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }

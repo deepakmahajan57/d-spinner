@@ -1,0 +1,20 @@
+.spinner-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spinner-table th,
+.spinner-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.spinner-table th {
+  background-color: #f4f4f4;
+}
+
+.table-r-d {
+  width: 100%;
+  overflow: auto;
+}

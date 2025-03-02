@@ -8,15 +8,13 @@ import { DSpinnerService } from 'd-spinner';
 })
 export class MultiCardDemoComponent {
 
-    constructor(private spinner: DSpinnerService) { }
+  constructor(private spinner: DSpinnerService) { }
 
-  // Method to show the spinner
-  showSpinner(card : any) {
+  showSpinner(card: any) {
     this.spinner.show(card);
   }
 
-  // Method to hide the spinner
-  hideSpinner(card : any) {
+  hideSpinner(card: any) {
     this.spinner.hide(card);
   }
 

@@ -1,0 +1,144 @@
+.ctm-card {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.ctm-white {
+    color: #f8f8f2;
+}
+
+.ctm-pink {
+    color: #f92672;
+}
+
+.ctm-green {
+    color: #a6e22e;
+}
+
+.ctm-brown {
+    color: #e6db74;
+}
+
+.ctm-space {
+    display: flex;
+
+    label {
+        margin: auto 0px;
+    }
+}
+
+.form-field {
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+
+    label {
+        margin: auto 8px auto 0;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    select {
+        margin: auto 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    input {
+        margin: auto 0;
+        width: 100%;
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.main-container-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-dv {
+    border: 2px dashed green;
+    width: 300px;
+    margin-top: 24px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.cstm-spin-f-1 {
+    margin: 12px;
+}
+
+.cstm-spin-color-1 {
+    margin: 2px 6px;
+}
+
+.cstm-spin-reset-1 {
+    width: 100%;
+    color: white;
+    background-color: #f92672;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.spinner-dv {
+    width: calc(100% - 328px);
+    position: relative;
+    margin-top: 24px;
+    margin-left: 24px;
+    border-radius: 8px;
+    min-width: 250px;
+    min-height: 250px;
+}
+
+.cstm-spin-d-2 {
+    margin: 16px;
+}
+
+.cstm-spin-code-1 {
+    margin-top: 24px;
+}
+
+.cstm-spin-code-2 {
+    background-color: #272822;
+    padding: 12px;
+    position: relative;
+    padding-top: 34px;
+    border-radius: 8px;
+}
+
+.cstm-spin-copy-clip-1 {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+}
+
+.cstm-spin-copy-clip-2 {
+    display: flex;
+    padding: 2px 2px;
+}
+
+.cstm-spin-copy-clip-3 {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 666px) {
+    .spinner-dv {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+
+    .form-dv {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+}

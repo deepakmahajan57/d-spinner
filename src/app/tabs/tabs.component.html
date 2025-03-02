@@ -1,27 +1,36 @@
 <div class="tabs">
-    <!-- Tab Navigation -->
     <ul class="tab-nav">
-        <li class="tab1" [class.active]="selectedTab === 0" (click)="selectTab(0)">
+        <li class="tab1 tab-border" [class.active]="selectedTab === 0" (click)="selectTab(0)">
             Multiple Spinner
         </li>
-        <li class="tab2" [class.active]="selectedTab === 1" (click)="selectTab(1)">
+        <li class="tab2 tab-border" [class.active]="selectedTab === 1" (click)="selectTab(1)">
             All Spinner Demo
+        </li>
+        <li class="tab3 tab-border" [class.active]="selectedTab === 2" (click)="selectTab(2)">
+            Customize Spinner
+        </li>
+        <li class="tab4 tab-border" [class.active]="selectedTab === 3" (click)="selectTab(3)">
+            Library Guide
         </li>
     </ul>
 
-    <!-- Tab Content -->
-    <div 
-        class="tab-content" 
-        [ngClass]="{
+    <div class="tab-content" [ngClass]="{
             'cyan-border': selectedTab === 0, 
-            'pink-border': selectedTab === 1
+            'pink-border': selectedTab === 1,
+            'orange-border': selectedTab === 2,
+            'green-border': selectedTab === 3,
         }">
         <div *ngIf="selectedTab === 0">
-            <!-- <h3>Content of Tab 1</h3> -->
             <app-multi-card-demo></app-multi-card-demo>
         </div>
         <div *ngIf="selectedTab === 1">
             <app-all-spinner-demo></app-all-spinner-demo>
+        </div>
+        <div *ngIf="selectedTab === 2">
+            <app-customize-spinner></app-customize-spinner>
+        </div>
+        <div *ngIf="selectedTab === 3">
+            <app-library-guide></app-library-guide>
         </div>
     </div>
 </div>

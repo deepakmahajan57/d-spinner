@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent {
-  selectedTab: number | null = 0; // Tracks the selected tab
+  selectedTab: number | null = 0;
 
-  // This method will be called when a tab is clicked
   selectTab(index: number): void {
     this.selectedTab = index;
   }
